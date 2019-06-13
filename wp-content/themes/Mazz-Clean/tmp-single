@@ -1,0 +1,39 @@
+<?php get_header(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<!-- FEATURED IMAGE -->
+<div class="inner-page" style="background: url('<?php echo get_field('imagen_de_fondo'); ?>');">
+	<div class="booking">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-7">
+					<!-- CONTENT -->
+					<?php the_content(); ?>
+				</div>
+				<div class="col-sm-12 col-md-5">
+					<div class="booking-form">
+						<!-- ACTION -->
+						<form role="form">
+							<label for="name">Nombre completo</label>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Nombre completo">
+							</div>
+							<label for="email">Correo electrónico</label>
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Correo electronico">
+							</div>
+							<label for="phone">Teléfono</label>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Telefono">
+							</div>
+							<button class="btn btn-danger btn-sm" type="submit">Confirmar</button>
+							<button class="btn btn-default btn-sm" type="reset">Borrar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endwhile; endif; ?>
+
+<?php get_footer(); ?>

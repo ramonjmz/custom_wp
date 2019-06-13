@@ -1,0 +1,2 @@
+AuthName "Gestionador"
+AuthUserFile "/home/advantur/.htpasswds/public_html/mazzclean.com/wp-admin/passwd"
